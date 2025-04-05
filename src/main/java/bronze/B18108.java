@@ -7,7 +7,7 @@ public class B18108 {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
 
-        System.out.print(a - 543);
+        System.out.print(a-543);
     }
 }
 
