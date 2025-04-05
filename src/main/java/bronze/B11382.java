@@ -10,7 +10,6 @@ public class B11382 {
         long b = sc.nextLong();
         long c = sc.nextLong();
 
-
         System.out.println(a + b + c);
 
     }
