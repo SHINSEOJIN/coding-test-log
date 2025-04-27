@@ -1,40 +1,33 @@
 package step0
 
 fun main() {
+    try {
+        println("2 ~ 9 까지의 숫자를 입력하세요.")
+        var num = readLine()!!.toInt()
 
-    var num = readLine()!!.toInt()
-
-    var minus = num - 1
-    var plus = num + 1
-
-    if (num in 3..8) {
-
-        for (i in 1..9) {
-            println("$minus * $i = ${i * minus}")
+        if (num in 3..8) {
+            printGugudan(num - 1)
+            printGugudan(num)
+            printGugudan(num + 1)
+        } else if (num == 2) {
+            printGugudan(num)
+            printGugudan(num + 1)
+        } else if (num == 9) {
+            printGugudan(num - 1)
+            printGugudan(num)
+        } else {
+            println("잘못된 입력입니다.\n2 ~ 9 까지의 숫자를 입력해 주세요.")
         }
-        for (i in 1..9) {
-            println("$num * $i = ${i * num}")
-        }
-        for (i in 1..9) {
-            println("$plus * $i = ${i * plus}")
-        }
-    } else if (num == 2) {
-        for (i in 1..9) {
-            println("$num * $i = ${i * num}")
-        }
-        for (i in 1..9) {
-            println("$plus * $i = ${i * plus}")
-        }
-    } else if (num == 9) {
-        for (i in 1..9) {
-            println("$minus * $i = ${i * minus}")
-        }
-        for (i in 1..9) {
-            println("$num * $i = ${i * num}")
-        }
-
+    } catch (e: Exception){
+        println("잘못된 입력입니다.")
     }
 }
 
+fun printGugudan(n: Int) {
+    println("----${n} 단----")
+    for (i in 1..9) {
+        println("$n * $i = ${n * i}")
+    }
+}
 
 
