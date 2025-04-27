@@ -6,6 +6,12 @@ fun main() {
         println("영단어를 입력하세요.")
 
         val word = readLine()!!
+
+        if (!word.all { it.isLetter() }) {
+            println("잘못된 입력입니다. 영문자만 입력해주세요.")
+            return
+        }
+
         var count = 0
 
         for (ch in word) {
