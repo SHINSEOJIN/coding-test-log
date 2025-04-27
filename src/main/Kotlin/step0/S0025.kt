@@ -1,7 +1,6 @@
 package step0
 
 fun main() {
-    println("2")
 
     var num = readLine()!!.toInt()
 
