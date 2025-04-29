@@ -1,6 +1,4 @@
-package step0_1
-
-import java.util.*
+package step0_1.NumberGame
 
 var fix = 0
 

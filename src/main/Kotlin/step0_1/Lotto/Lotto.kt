@@ -1,4 +1,4 @@
-package step0_1
+package step0_1.Lotto
 
 import kotlin.random.Random
 
