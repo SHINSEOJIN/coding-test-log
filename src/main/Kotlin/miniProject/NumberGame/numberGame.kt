@@ -1,4 +1,4 @@
-package step0_1.NumberGame
+package miniProject.NumberGame
 
 var fix = 0
 
