@@ -9,9 +9,11 @@ fun main() {
 fun lottomachine() {
     val numbers = mutableListOf<Int>()
 
-    for (i in 1..6) {
+    while (numbers.size < 6) {
         val number = Random.nextInt(1, 46)
-        numbers.add(number)
+        if (!numbers.contains(number)) {
+            numbers.add(number)
+        }
     }
     println(numbers.sorted())
 }
