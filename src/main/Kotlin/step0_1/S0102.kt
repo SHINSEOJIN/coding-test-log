@@ -57,31 +57,6 @@ fun inputLotto(): Set<Int> {
     }
 }
 
-//로또번호 비교하고 개수 출력
-fun compareLotto(winning: Set<Int>, bonus: Int, user: Set<Int>) {
-    val match = winning.intersect(user).size
-    val bonusMatched = bonus in user
-
-    println("당첨번호: ${winning.sorted()}")
-    println("보너스번호: $bonus")
-    println("입력번호: ${user.sorted()}")
-    println(
-        "맞은 개수: $match 개 (보너스 일치: ${if (bonusMatched) "O" else "X"})"
-    )
-
-    //맞은개수비교
-    val result = when {
-        match == 6 -> "1등"
-        match == 5 && bonusMatched -> "2등"
-        match == 5 -> "3등"
-        match == 4 -> "4등"
-        match == 3 -> "5등"
-        match == 2 -> "6등"
-        else -> "낙첨되었습니다."
-    }
-    println("결과: $result")
-}
-
 //로또 구매횟수 입력받기
 fun askHowManyTimes(): Int {
     while (true) {
