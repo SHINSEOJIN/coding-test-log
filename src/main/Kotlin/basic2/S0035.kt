@@ -3,7 +3,6 @@ package basic2
 fun main() {
     println("'a-g'까지의 알파벳 중 한 개를 입력해주세요.")
     val input = readLine()!!
-//        .split(Regex("[\\s,]+"))
         .replace("\\s+".toRegex(),"")
 
     val wordMap = mapOf(
